@@ -12,7 +12,8 @@ import React from 'react';
 // import TodoListDemo from './components/TodoListDemo';
 // import TodoList2 from './components/ToDoList2';
 // import Header from './components/Header';
-import AxiosModel from './components/AxiosModel';
+// import AxiosModel from './components/AxiosModel';
+import FetchJsonp from './components/FetchJsonp';
 
 
 
@@ -29,7 +30,8 @@ function App() {
 			{/* <TodoListDemo></TodoListDemo> */}
 			{/* <TodoList2></TodoList2> */}
 			{/* <Header></Header> */}
-			<AxiosModel></AxiosModel>
+			{/* <AxiosModel></AxiosModel> */}
+			<FetchJsonp></FetchJsonp>
 		</div>
 	);
 }

@@ -7,12 +7,23 @@ class AxiosModel extends Component {
         super(props);
         this.state = { 
 
-         };
+            domain:'https://app.dyly.com',
+            list:[],
+
+        };
     }
     getData = ()=>{ // 获取数据
-        console.log('获取数据');
-        axios.get('').then((res)=>{
-            console.log(res);
+        axios.get(this.state.domain+'/vc/qhRoadShow/getSignUpList',{
+            params:{
+                roadShowId:2
+            }
+        }).then((res)=>{
+            if(res.data.status == 1){
+                console.log(res.data.data);
+                this.setState({
+                    list:res.data.data
+                })
+            }
         })
     }
     render() {
@@ -20,8 +31,22 @@ class AxiosModel extends Component {
             <div>
                 <h2>axios</h2>
                 <button onClick={this.getData}>按钮</button>
+
+                <ul>
+                    {
+                        this.state.list.map((value,key)=>{
+                            return (
+                                <li key={key}>
+                                    {value.companyName}
+                                </li>
+                            )
+                        })
+                    }
+                    
+                </ul>
+
             </div>
-        );
+        )
     }
 }
 
