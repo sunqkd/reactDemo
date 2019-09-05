@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Home from './components/Home';
+
+
+// import Home from './components/Home';
 // import News from './components/News';
 // import FunMethods from './components/FunMethods';
 // import RefModel from './components/RefModel';
@@ -10,12 +12,14 @@ import Home from './components/Home';
 // import TodoListDemo from './components/TodoListDemo';
 // import TodoList2 from './components/ToDoList2';
 // import Header from './components/Header';
+import AxiosModel from './components/AxiosModel';
+
 
 
 function App() {
 	return (
 		<div className="App">
-			<Home></Home>
+			{/* <Home></Home> */}
 			{/* <News></News> */}
 			{/* <FunMethods></FunMethods> */}
 			{/* <RefModel></RefModel> */}
@@ -25,6 +29,7 @@ function App() {
 			{/* <TodoListDemo></TodoListDemo> */}
 			{/* <TodoList2></TodoList2> */}
 			{/* <Header></Header> */}
+			<AxiosModel></AxiosModel>
 		</div>
 	);
 }

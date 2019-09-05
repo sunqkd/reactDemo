@@ -61,6 +61,8 @@ class Home extends  React.Component {
 
                 <Header title={this.state.title} run={this.run} news12={this} ref="header"></Header>
 
+                <Header  run={this.run} news12={this} ref="header"></Header>
+
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropsTypes from 'prop-types';
 class Header extends Component {
 
     constructor(props) {
@@ -29,6 +29,18 @@ class Header extends Component {
         )
     }
 
+}
+
+// 不传值时的默认值 
+Header.defaultProps = {
+    title:'不传值时候的默认值',
+    
+}
+
+// 定义父组件给子组件传值的类型
+
+Header.propTypes = {
+    title:PropsTypes.string
 }
 
 export default Header;
