@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../assets/css/index.css';
 
 import Header from './Header';
-
+import Lifecycle from './Lifecycle';
 // 绑定属性注意：
 // class 要换成 className
 // label for 要换成 htmlFor
@@ -22,7 +22,8 @@ class Home extends  React.Component {
             style:{
                 color:"blue",
                 fontSize:"20px"
-            }
+            },
+            flag:true, // 挂载组件
         }
     }
 
@@ -32,6 +33,13 @@ class Home extends  React.Component {
 
     getChild = () => { // 
         console.log(this.refs.header.state)
+    }
+
+    setFlag = () => { // 挂载组件
+        this.setState({
+            title:'465564',
+            flag:!this.state.flag
+        })
     }
 
     // render 模板 jsx 语法
@@ -62,6 +70,14 @@ class Home extends  React.Component {
                 <Header title={this.state.title} run={this.run} news12={this} ref="header"></Header>
 
                 <Header  run={this.run} news12={this} ref="header"></Header>
+
+                <hr/>
+
+                <button onClick={this.setFlag}>挂载组件</button>
+                {
+                    this.state.flag?<Lifecycle title={this.state.title}/>:' '
+                }
+                
 
             </div>
         )
