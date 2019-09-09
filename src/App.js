@@ -56,6 +56,7 @@ function App() {
 					</li>
 				</ul>
 				<hr />
+				{/* 路由加载不同的组件 */}
 				<Route exact path="/" component={Router1} />
 				<Route path="/about" component={Router2} />
 				<Route path="/topics" component={Router3} />
