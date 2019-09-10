@@ -26,6 +26,8 @@ import Router2 from './components/Router2';
 import Router3 from './components/Router3';
 
 import Rouer3Detail from './components/Rouer3Detail';
+import Projectcontent from './components/Projectcontent';
+
 
 function App() {
 	return (
@@ -63,6 +65,9 @@ function App() {
 				<Route path="/about" component={Router2} />
 				<Route path="/topics" component={Router3} />
 				<Route path='/content/:aid' component={Rouer3Detail}/>
+
+				<Route path='/projectcontent' component={Projectcontent}/> 
+				
 			</div>
 	  	</Router>
 	);
