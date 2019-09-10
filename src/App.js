@@ -25,6 +25,8 @@ import Router1 from './components/Router1';
 import Router2 from './components/Router2';
 import Router3 from './components/Router3';
 
+import Rouer3Detail from './components/Rouer3Detail';
+
 function App() {
 	return (
 		// <div className="App">
@@ -60,6 +62,7 @@ function App() {
 				<Route exact path="/" component={Router1} />
 				<Route path="/about" component={Router2} />
 				<Route path="/topics" component={Router3} />
+				<Route path='/content/:aid' component={Rouer3Detail}/>
 			</div>
 	  	</Router>
 	);
