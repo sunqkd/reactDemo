@@ -36,7 +36,7 @@ class Router2 extends Component {
                         this.state.list.map((value,index)=>{
                             return ( 
                                 <li key={index}>
-                                   <Link to={`/projectcontent`}> {value.title} </Link>
+                                   <Link to={`/projectcontent?aid=${value.aid}`}> {value.title} </Link>
                                 </li> 
                             )
                         })
